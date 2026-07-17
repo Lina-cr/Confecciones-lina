@@ -1,1 +1,0 @@
-Changing brand text Lina -> Confecciones Lina in index.html, cart.html, owner.html
