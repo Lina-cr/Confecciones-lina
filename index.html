@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONFECCIONES LINA | Boutique de Moda Premium</title>
+    <meta
+      name="description"
+      content="Boutique de moda elegante con colección premium de ropa para cada ocasión. Diseño exclusivo, calidad de lujo."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Hero Principal -->
+    <header class="hero-main">
+      <div class="hero-content">
+        <div class="hero-logo-wrapper">
+          <img src="Logo.jpeg" alt="Confecciones Lina logo" class="hero-logo" />
+        </div>
+        <h1 class="hero-title">Confecciones Lina</h1>
+        <p class="hero-tagline">Moda elegante para cada ocasión</p>
+        <button class="btn-primary btn-hero" onclick="document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' })">
+          Explorar catálogo
+        </button>
+      </div>
+    </header>
+
+    <!-- Navbar Fijo -->
+    <nav class="navbar-fixed container">
+      <div class="navbar-content">
+        <a href="#catalogo" class="navbar-brand">
+          <img src="Logo.jpeg" alt="Confecciones Lina" class="navbar-logo" />
+          <span>Confecciones Lina</span>
+        </a>
+        <div class="navbar-menu">
+          <a href="#catalogo" class="nav-link">Catálogo</a>
+          <button id="favoritesToggle" class="nav-link nav-btn">Favoritos</button>
+        </div>
+        <div class="navbar-actions">
+          <button id="themeToggle" class="nav-icon" aria-label="Cambiar tema">🌙</button>
+          <a id="cartBtn" class="nav-cart" href="cart.html">
+            🛒 <span id="cartCount">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Sección Catálogo -->
+      <section id="catalogo" class="section-catalog container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Colección Exclusiva</h2>
+            <p class="section-subtitle">Descubre nuestras prendas premium seleccionadas cuidadosamente</p>
+          </div>
+          <div class="search-box">
+            <input id="searchInput" type="search" placeholder="Buscar prendas..." class="search-input" />
+          </div>
+        </div>
+
+        <!-- Categorías -->
+        <div class="categories-section">
+          <button class="category-btn active" data-category="all">Todos</button>
+          <button class="category-btn" data-category="Short">Short</button>
+          <button class="category-btn" data-category="Pantalones">Pantalones</button>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

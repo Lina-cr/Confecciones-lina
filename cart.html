@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito | Confecciones Lina</title>
+    <meta
+      name="description"
+      content="Revisa y confirma tu carrito de compras en Confecciones Lina."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar Fijo -->
+    <nav class="navbar-fixed container">
+      <div class="navbar-content">
+        <a href="index.html#catalogo" class="navbar-brand">
+          <img src="Logo.jpeg" alt="Confecciones Lina" class="navbar-logo" />
+          <span>Confecciones Lina</span>
+        </a>
+        <div class="navbar-menu">
+          <a href="index.html#catalogo" class="nav-link">Catálogo</a>
+        </div>
+        <div class="navbar-actions">
+          <button id="themeToggle" class="nav-icon" aria-label="Cambiar tema">🌙</button>
+          <a id="cartBtn" class="nav-cart" href="cart.html">
+            🛒 <span id="cartCount">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section-catalog container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Tu Carrito</h2>
+            <p class="section-subtitle">Revisa y confirma los productos antes de encargar</p>
+          </div>
+        </div>
+
+        <div id="cartPage" class="cart-container">
+          <div class="cart-items" id="cartItems"></div>
+          <div class="cart-summary">
+            <div class="cart-total">
+              <span>Total:</span>
+              <span id="cartTotal" class="total-amount">$0</span>
+            </div>
+            <button id="checkoutBtn" class="btn-primary btn-checkout">
+              Encargar por WhatsApp
+            </button>
+            <a href="index.html#catalogo" class="btn-secondary btn-continue">
+              Continuar comprando
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
